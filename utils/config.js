@@ -1,5 +1,8 @@
+const env = process.env;
+
 const config = {
-  PORT: process.env.PORT || 8080,
+  PORT: env.PORT || 8080,
+  MONGO_URI: env.MONGO_URI || "mongodb://127.0.0.1:27017/db",
 };
 
 module.exports = config;

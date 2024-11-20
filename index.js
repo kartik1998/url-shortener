@@ -1,6 +1,8 @@
 const express = require("express");
 const config = require("./utils/config");
+const connections = require("./utils/connections");
 
+connections.establishMongoConnection();
 const app = express();
 
 app.get("/ping", (req, res) => {
